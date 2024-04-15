@@ -2,6 +2,8 @@
 
 Este é um projeto simples de uma aplicação web para consultar dados sobre casos de COVID-19 em diferentes países.
 
+![image](https://github.com/michaellinsk/Api-covid19-Kidopi/assets/121871171/87a883ad-5ccd-4d2c-bca7-eacd58064ab1)
+
 ## Conteúdo do Repositório
 
 O repositório contém os seguintes arquivos:
@@ -21,7 +23,18 @@ Para executar a aplicação, siga os passos abaixo:
 3. Coloque os arquivos no diretório raiz do seu servidor web.
 4. Inicie o servidor web.
 5. Acesse a página `index.php` no seu navegador.
+6. Não se esqueça de Criar um banco de dados para os registro de consultas realizadas
+   
+Segue abaixo a estrutura de criação do banco de dados e da tabela:
 
+CREATE DATABASE api_covid_19;
+
+CREATE TABLE `acessos_api` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `data_hora` timestamp NOT NULL DEFAULT current_timestamp(),
+  `pais` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=130 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci
 ## Funcionalidades
 
 A aplicação permite:
